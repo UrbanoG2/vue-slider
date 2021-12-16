@@ -16,13 +16,15 @@ var app = new Vue({
     el: '#app',
     data: {
 
-        counter: 0,
+        counter: null,
         images: [
-          "image1.jpg",
-          "image2.jpg",
-          "image3.jpg",
-          "image4.jpg"
+        //   "image1.jpg",
+        //   "image2.jpg",
+        //   "image3.jpg",
+        //   "image4.jpg"
       ]
+
+
     },
 
     
@@ -42,8 +44,33 @@ var app = new Vue({
             if (this.counter > this.images.length - 1) {
                 this.counter = 0;
             }
-        }
+        },
+
+        
     },
+
+    created() {
+        this.images = [
+          "image1.jpg",
+          "image2.jpg",
+          "image3.jpg",
+          "image4.jpg"
+        ],
+
+        this.counter = 0;
+
+    
+        setInterval(() => {
+            this.counter += 1;
+
+            if (this.counter > this.images.length - 1) {
+                this.counter = 0;
+            }
+
+            console.log(this.counter);
+        }, 2000)
+    
+    }
 
 
   })
