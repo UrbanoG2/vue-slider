@@ -13,11 +13,16 @@
 
 <body>
   <div id="app" class="container">
+
     <div class="slider-wrapper">
       <div class="prev" @click ="prev">
         <i class="fas fa-angle-left"></i>
       </div>
-      <div class="images">
+      <div @mouseover ="hover = true" 
+      @mouseleave ="hover = false"
+
+      
+      class="images">
         <img :src="`img/${images[counter]}`" alt="">
       </div>
       <div class="next" @click="next">

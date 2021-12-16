@@ -22,9 +22,9 @@ var app = new Vue({
         //   "image2.jpg",
         //   "image3.jpg",
         //   "image4.jpg"
-      ]
+        ],
 
-
+        hover: false,
     },
 
     
@@ -46,6 +46,11 @@ var app = new Vue({
             }
         },
 
+        // mouseover: function () {
+        //     if (hover == true) {
+
+        //     }
+        // }
         
     },
 
@@ -69,8 +74,20 @@ var app = new Vue({
 
             console.log(this.counter);
         }, 2000)
-    
-    }
+        
+        // if (hover == true) {
 
+        //     let element = document.querySelector(".images");
+
+        //     console.log(element);
+
+        //     element.classList.add ("block");
+        // }
+    },
+
+   
 
   })
+  
+
+  

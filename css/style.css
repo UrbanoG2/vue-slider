@@ -75,3 +75,7 @@
   .nav>i.active {
     color: aqua;
   }
+
+  .block {
+    display: block;
+  }
